@@ -1,7 +1,4 @@
-import br.com.dio.desafio.dominio.Bootcamp;
-import br.com.dio.desafio.dominio.Curso;
-import br.com.dio.desafio.dominio.Dev;
-import br.com.dio.desafio.dominio.Mentoria;
+import br.com.dio.desafio.dominio.*;
 
 import java.time.LocalDate;
 
@@ -12,15 +9,11 @@ public class Main {
         curso1.setDescricao("descrição curso java");
         curso1.setCargaHoraria(8);
 
-        Curso curso2 = new Curso();
-        curso2.setTitulo("curso js");
-        curso2.setDescricao("descrição curso js");
-        curso2.setCargaHoraria(4);
+        //Polimorfism Example - Curso extends Conteudo
+        Conteudo curso2 = new Curso("curso js", "descrição curso js", 4);
 
-        Mentoria mentoria = new Mentoria();
-        mentoria.setTitulo("mentoria de java");
-        mentoria.setDescricao("descrição mentoria java");
-        mentoria.setData(LocalDate.now());
+        //Polimorfism Example - Curso extends Conteudo
+        Conteudo mentoria = new Mentoria("mentoria de java", "descrição mentoria java", LocalDate.now());
 
         /*System.out.println(curso1);
         System.out.println(curso2);
